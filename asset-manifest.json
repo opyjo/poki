@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/poki/static/css/main.e6e683ad.css",
-    "main.js": "/poki/static/js/main.88da1e85.js",
+    "main.css": "/poki/static/css/main.fe14b82a.css",
+    "main.js": "/poki/static/js/main.832d9108.js",
     "index.html": "/poki/index.html",
-    "main.e6e683ad.css.map": "/poki/static/css/main.e6e683ad.css.map",
-    "main.88da1e85.js.map": "/poki/static/js/main.88da1e85.js.map"
+    "main.fe14b82a.css.map": "/poki/static/css/main.fe14b82a.css.map",
+    "main.832d9108.js.map": "/poki/static/js/main.832d9108.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6e683ad.css",
-    "static/js/main.88da1e85.js"
+    "static/css/main.fe14b82a.css",
+    "static/js/main.832d9108.js"
   ]
 }
