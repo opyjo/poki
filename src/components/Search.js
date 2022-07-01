@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const Search = ({ searchPokemon }) => {
   const [term, setTerm] = useState("");
+
   const onChange = (e) => {
     setTerm(e.target.value);
   };

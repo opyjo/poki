@@ -20,17 +20,14 @@ const App = () => {
   };
 
   // This function is used to store the user's input in the reviewObject state variable.
-  const handleSubmit = (user) => {
-    setReviewObject(user);
+  const handleSubmit = (formValues) => {
+    setReviewObject(formValues);
     navigate("/review");
   };
 
   return (
     <>
-      <div
-        className=" grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3 bg-indigo-200"
-        h-screen
-      >
+      <div className=" grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-3 bg-indigo-200">
         <Routes>
           <Route
             path="/"
