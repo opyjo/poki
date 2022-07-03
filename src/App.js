@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import Form from "./components/Form";
 import Search from "./components/Search";
@@ -7,8 +9,10 @@ import Pokemon from "./components/Pokemon";
 import Review from "./components/Review";
 
 const App = () => {
+  const notify = () => toast("Please select your favorite Pokemon!");
   let navigate = useNavigate();
   // This code  creates a state variable called "pokemon" and sets it to an empty object.
+  const [isPokemonSelected, setIsPokemonSelected] = useState(false);
   const [pokemon, setPokemon] = useState({});
   //this code creates a state variable called "reviewObject" and sets it to an empty object. The object is used to store the user's input.
   const [reviewObject, setReviewObject] = useState({});
@@ -17,12 +21,17 @@ const App = () => {
   const searchPokemon = async (term) => {
     const res = await axios.get(`https://pokeapi.co/api/v2/pokemon/${term}`);
     setPokemon(res.data);
+    setIsPokemonSelected(true);
   };
 
   // This function is used to store the user's input in the reviewObject state variable.
   const handleSubmit = (formValues) => {
     setReviewObject(formValues);
-    navigate("/review");
+    if (isPokemonSelected === false) {
+      notify();
+    } else {
+      navigate("/review");
+    }
   };
 
   return (
@@ -47,6 +56,7 @@ const App = () => {
           element={<Review reviewObject={reviewObject} pokemon={pokemon} />}
         />
       </Routes>
+      <ToastContainer />
     </>
   );
 };

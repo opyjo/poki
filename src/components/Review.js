@@ -28,7 +28,7 @@ const Review = ({ reviewObject, pokemon }) => {
           </h5>
         </div>
       </div>
-
+      {/* This div render the pokemon image and name  based on the pokemon selected.   */}
       <div className="flex flex-col justify-center items-center ">
         <div>
           <h1 className="text-gray-900 text-lg font-small mb-2">

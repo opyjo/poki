@@ -37,7 +37,7 @@ const Form = ({ onSubmit }) => {
   return (
     <div>
       <div className="block p-6 rounded-lg shadow-lg bg-white  flex items-center justify-center h-screen bg-indigo-400">
-        <form>
+        <form onSubmit={onSubmitHandler}>
           <h1 className="text-4xl">Registration Form</h1>
           <div className="form-group ">
             <label
@@ -127,7 +127,6 @@ const Form = ({ onSubmit }) => {
             <p>Select your favorite pokemon before submiting</p>
           </div>
           <button
-            onClick={onSubmitHandler}
             type="submit"
             className="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
                active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"

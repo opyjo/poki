@@ -6,6 +6,7 @@ const Search = ({ searchPokemon }) => {
 
   const onChange = (e) => {
     setTerm(e.target.value);
+    console.log(e.target.value);
   };
 
   // This code lift up the search term and passes it to the searchPokemon function. The searchPokemon function is defined in the App.js file. The searchPokemon function is used to make a request to the API to get the data for the pokemon.

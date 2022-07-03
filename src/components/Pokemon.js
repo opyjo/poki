@@ -9,12 +9,13 @@ const Pokemon = ({ pokemon }) => {
     <div class="flex flex-col justify-center items-center ">
       <div>
         <h1 className="text-gray-900 text-xl font-medium mb-2">
-          {pokemon.species.name}
+          Pokemon Name: {pokemon.species.name}
         </h1>
       </div>
       <div>
         <img
-          className="rounded-t-lg"
+          className="rounded-t-lg h-60
+          w-60 object-cotain"
           src={pokemon.sprites.front_default}
           alt={pokemon.species.name}
         />
