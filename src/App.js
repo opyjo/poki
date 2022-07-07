@@ -27,11 +27,7 @@ const App = () => {
   // This function is used to store the user's input in the reviewObject state variable.
   const handleSubmit = (formValues) => {
     setReviewObject(formValues);
-    if (isPokemonSelected === false) {
-      notify();
-    } else {
-      navigate("/review");
-    }
+    isPokemonSelected ? navigate("/review") : notify();
   };
 
   return (

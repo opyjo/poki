@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 
 const Form = ({ onSubmit }) => {
   const initialValues = {
-    firstName: " ",
-    lastName: " ",
-    phoneNumber: " ",
-    address: " ",
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    address: "",
   };
 
   const [formValues, setFormValues] = useState(initialValues);
